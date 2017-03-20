@@ -17,7 +17,8 @@ public class AppMain {
    * Main method.
    */
   public static void main(String[] args) throws Exception {
-    Server server = new ExampleServer(AppMain.class.getPackage().getName()).build();
+    String packageName = AppMain.class.getPackage().getName();
+    Server server = new ExampleServer(packageName).build();
 
     // add shutdown hook
     Runtime.getRuntime().addShutdownHook(new Thread(() -> {
