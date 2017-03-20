@@ -1,0 +1,6 @@
+#BDSDP Base
+base:
+  entry: example
+  version: version
+  description: description
+  author: author

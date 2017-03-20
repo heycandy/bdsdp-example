@@ -1,0 +1,12 @@
+#BDSDP Example
+example:
+  url: http://localhost:18080
+
+  discovery:
+    mode: simple
+    web:
+      mode: simple
+      url: http://localhost:18080
+
+  security:
+    mode: none
