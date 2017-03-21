@@ -73,7 +73,7 @@ public class ExampleConfiguration {
 
     Map map = conf.get(names[0]);
 
-    Object obj = null;
+    Object obj = map;
     for (int i = 1; i < names.length; i++) {
       obj = map.get(names[i]);
       if (i == names.length - 1) {
