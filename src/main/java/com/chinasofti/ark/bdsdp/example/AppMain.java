@@ -19,7 +19,7 @@ public class AppMain {
   public static void main(String[] args) throws Exception {
     String packageName = AppMain.class.getPackage().getName();
     Server server = new ExampleServer(packageName).build();
-
+    Class.forName("org.apache.hadoop.conf.Configuration");
     // add shutdown hook
     Runtime.getRuntime().addShutdownHook(new Thread(() -> {
       try {

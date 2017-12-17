@@ -155,6 +155,7 @@
             </execution>
           </executions>
           <configuration>
+            <mainClass>com.chinasofti.ark.bdsdp.example.AppMain</mainClass>
             <includeProjectDependencies>true</includeProjectDependencies>
             <includePluginDependencies>false</includePluginDependencies>
             <additionalClasspathElements>
@@ -169,7 +170,13 @@
               </additionalClasspathElement>
 
             </additionalClasspathElements>
-            <mainClass>com.chinasofti.ark.bdsdp.example.AppMain</mainClass>
+            <commandlineArgs>
+              -Djava.ext.dirs=${project.basedir}/target/lib
+            </commandlineArgs>
+
+            <arguments>
+              <argument>-Djava.ext.dirs=${project.basedir}/target/lib</argument>
+            </arguments>
           </configuration>
         </plugin>
 
@@ -268,7 +275,7 @@
                 </goals>
                 <configuration>
                   <encoding>UTF-8</encoding>
-                  <outputDirectory>${project.build.outputDirectory}</outputDirectory>
+                  <outputDirectory>${project.basedir}/target</outputDirectory>
                   <resources>
                     <resource>
                       <directory>${project.basedir}/platform/fi-c60</directory>
